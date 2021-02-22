@@ -1,0 +1,318 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Raleway', Helvetica, sans-serif, sans-serif;
+    background-color: #F7F2F0;
+    color: #000000;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+.colorInvers{
+    background-color: #232323;
+    color: #F7F7F7;
+}
+
+.light{
+    font-weight: lighter;
+}
+.bold{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.inline li{
+    display: inline;
+    margin-right: 5.5em;
+}
+.inline li img {
+    height: 5.5em;
+}
+
+a:link {
+    text-decoration:none; 
+    color: #F7F7F7;
+   } 
+
+a img:hover {
+    transform: scale(1.2);
+   } 
+
+a:visited {
+       color: #F7F7F7;
+   }
+.italic{
+    font-style: italic;
+}
+
+
+
+/* Partie Header*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-size: 1.6em;
+    color: #000000;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    padding-top: 10em;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0.16em 0.16em rgba(247, 247, 247, 0.808);
+    height: 100vh;
+    min-width: 5.5%;  
+    padding-bottom:0.83em;
+    display: flex;
+    flex-direction: column;
+   
+}
+nav ul li{
+    margin-top: 80px;
+
+}
+nav ul a img{
+    min-width: 20px;
+    max-width: 30px;
+    
+}
+
+.headerLogo img{
+    height : 400px;
+    margin-left: 100px;
+
+}
+
+.headerProfil {
+    margin-left: 220px;
+    margin-top: 20px;
+}
+
+.headerProfil h2{
+    color: #f66744;
+    margin-top: 80px;
+    padding-left: 50px;
+}
+
+.headerLogo{
+    text-align: center;
+    align-self: center;
+    margin-left: 100px;
+    animation-name: fondu;
+    animation-duration: 3s;
+}
+@keyframes fondu {
+    from {     
+        opacity: 0;
+    }
+    to {     
+        opacity: 1;
+    }
+}
+
+/* Partie principale*/
+
+
+.section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+.section h2{
+    font-size: 40px;
+    color: #f66744; 
+}
+
+.sectionBorder{
+    border-top : 1px solid  #f66744;  
+    margin-bottom: 10px;
+}
+.flex{
+    display: flex;
+}
+ 
+/* animation balle blanche*/
+    @keyframes bounce {
+        0%   {  top:0px;}
+        25%   { top : 75px;}
+        50%  { top:150px;}
+        75%  { top:275px;}
+        100% { top:350px;}
+      }
+
+      .slidedown{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: bounce 2s linear infinite alternate;
+      }
+  
+/* Partie portfolio */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    opacity: 0;
+}
+
+.projet1 {
+    grid-column : 1/span 2;
+    grid-row: 1/ span 1;
+}
+.projet2 {
+    grid-column : 3/span 1;
+    grid-row: 1/ span 1;
+}
+.projet3 {
+    grid-column : 4/span 1;
+    grid-row: 1/ span 1;
+ 
+}
+.projet4 {
+    grid-column : 1/span 2;
+    grid-row: 2/ span 1;
+}
+.projet5 {
+    grid-column : 3/span 1;
+    grid-row: 2/ span 1;
+}
+.projet6 {
+    grid-column : 4/span 1;
+    grid-row: 2/ span 1;
+}
+.projet7 {
+    grid-column : 1/span 3;
+    grid-row: 3/ span 1;
+}
+
+.projet8 {
+    grid-column : 4/span 1;
+    grid-row: 3/ span 1;
+}
+
+.projetBorder{
+    text-align: top;
+    height: 300px;
+    border-top: solid 0.5px #f66744; 
+    padding-top: 10px;
+}
+
+.grid img{
+    height: 200px;
+  
+}
+
+.grid.scroll{
+    opacity:1;
+    animation-name: magic;
+    animation-duration: 2s;
+
+}
+
+
+/*Les bannières de contact et à propos*/
+.banniere{
+    height: 300px;
+    text-align: center;
+    padding-bottom:  80px ;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.banniere h2{ 
+    font-size: 40px;
+    border-bottom : 1px solid #F7F7F7 ;
+    padding-bottom: 20px;
+    padding-top: 100px ;
+}
+
+.banniere  img  {
+    height: 30px;
+    margin-top: 15px;
+}
+
+
+/*footer*/
+
+footer {
+    text-align: end;
+}
+
+footer a:link a:visited{
+    color: #000000;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1024px) {
+    main{
+        padding-left: 80px;
+        margin-right: 50px;
+    }
+    nav{
+
+        height: 50vh;
+        width: 12%;  
+        opacity: 0.9;
+        padding-bottom:0.83em;
+
+       
+    }
+    .headerProfil h2{
+        color: #f66744;
+        margin-top: 0px;
+        padding-left: 0px;
+    }
+    .section{
+        margin-right: 0px;
+    }
+    .sectionBorder{
+        border-top : 1px solid  #f66744;  
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation : landscape){
+    main{
+        margin-left: 80px;
+        margin-right: 50px;
+    }
+    nav{
+
+        height: 100vh;
+        width: 12%;  
+        opacity: 0.9;
+        padding-bottom:0.83em;
+
+       
+    }
+    nav ul li{
+        margin-top: 40px;
+    
+    }
+    .section{
+        margin-right: 0px;
+}
+.sectionBorder{
+    border-top : 1px solid  #f66744;  
+    margin-top: 20px;
+ }
+
+}
